@@ -70,21 +70,21 @@ public class Jogo {
                     "\n" +
                     "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geográfico e cultural do Brasil, que era muito pouco conhecido na Itália daquela época. A única informação que tinham era que o território brasileiro era extremamente grande.\n" +
                     "\n" +
-                    "Barba Verde, acompanhado de um de seus ajudantes <NOME PERSONAGEM> e de seu fiel escudeiro, Louro (um papagaio da espécie ecletus, tão felpudo quanto a própria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n" +
+                    "Barba Verde, acompanhado de um de seus ajudantes " + personagem + " e de seu fiel escudeiro, Louro (um papagaio da espécie ecletus, tão felpudo quanto a própria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n" +
                     "\n" +
                     "Era uma noite fria de inverno e o tempo não estava nada bom. Barba Verde navegava com cautela, prestando muita atenção no caminho e nos seus instrumentos de navegação.\n" +
                     "\n" +
-                    "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior.  O vento e a chuva extremamente fortes dificultavam muito a navegação e a interpretação dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegação, acabou, sem perceber, saído da rota planejada. \n" +
+                    "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior. O vento e a chuva extremamente fortes dificultavam muito a navegação e a interpretação dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegação, acabou, sem perceber, saído da rota planejada. \n" +
                     "\n" +
                     "Perto do amanhecer, a tempestade teria passado e, estranhamente, o tempo estava bom, o dia estava lindo e perfeito para navegação, então o capitão então continuou navegando para direção que achava estar correta, até que avistaram terra firme logo a frente. Isso foi estranho para ele, porque a viagem de ida duraria alguns dias e não teria passado nem 15 horas desde a partida, mesmo assim, resolveram ir até a terra para descansar um pouco após a longa e tensa noite que teriam passado e para decidir para qual direção seguir para chegarem ao Brasil.\n" +
                     "\n" +
-                    "Chegando em terra firme, eles puderam perceber que não se tratava de um continente, e sim de uma ilha não muito grande. Barba Verde e seu ajudante <NOME DO PERSONAGEM> se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n" +
+                    "Chegando em terra firme, eles puderam perceber que não se tratava de um continente, e sim de uma ilha não muito grande. Barba Verde e seu ajudante " + personagem + " se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n" +
                     "\n" +
                     "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitão, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n" +
                     "\n" +
                     "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta de algum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
                     "\n" +
-                    "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante <NOME DO PERSONAGEM> e perguntou: \n");
+                    "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou: \n");
         }
     }
 
@@ -93,9 +93,7 @@ public class Jogo {
         // Imprime as instruções do jogo
         System.out.println();
         System.out.println("Instruções: ");
-        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo \n" +
-                "resolvendo desafios e acertando as respostas das perguntas chave para chegarem ate o local onde o \n" +
-                "tesouro está escondido e, ao final, resolver o desadio principal para que encontrem o tesouro.");
+        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo resolvendo desafios e acertando as respostas das perguntas chave para chegarem ate o local onde o tesouro está escondido e, ao final, resolver o desadio principal para que encontrem o tesouro.");
         System.out.println();
 
     }
@@ -183,6 +181,15 @@ public class Jogo {
         // Funcao principal do jogo
         instrucoes();
         historia(0);
+        System.out.println("\n" + personagem + ", voce poderia ajudar o Pirata Barba Verde a resolver os desafios para chegar ao tesouro? (S ou N)");
+        String resp;
+        do {
+            resp = entrada.next().toUpperCase();
+        } while (!valida("sair", resp));
+        if (resp.equals("N")){
+            sair();
+        }
+        System.out.println("Sabia. Voce é demais. Vamos comecar com os desafios.");
         /*get_pergunta(1);
         get_pergunta(2);
         get_pergunta(3);
