@@ -84,7 +84,13 @@ public class Jogo {
                     "\n" +
                     "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta de algum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
                     "\n" +
-                    "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou: \n");
+                    "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou:" +
+                    " \n");
+
+            case 1 -> System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
+                    "\n" +
+                    " Pra sua sorte o ponto de partida é entre os dois coqueiros que voces tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
+                    "\n ");
         }
     }
 
@@ -93,9 +99,15 @@ public class Jogo {
         // Imprime as instruções do jogo
         System.out.println();
         System.out.println("Instruções: ");
-        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo resolvendo desafios e acertando as respostas das perguntas chave para chegarem ate o local onde o tesouro está escondido e, ao final, resolver o desadio principal para que encontrem o tesouro.");
-        System.out.println();
-
+        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo " +
+                "respondendo as perguntas e resolvendo desafios chave para revelarem as instrucoes que os faram " +
+                "chegar ate o local onde o tesouro está escondido e, ao final, resolver o desafio principal para que " +
+                "encontrem o tesouro." +
+                "\n" +
+                " Não se preoculpe se errar a resposta de algumas das perguntas. Caso isso aconteça voce terá alguma" +
+                "referencia para consultar e te auxiliar na resolução, mas tome cuidado. Se voce errar 3 vezes a mesma" +
+                "pergunta nunca mais será possivel chegar ate o tesouro." +
+                "\n");
     }
 
     static void creditos() {
@@ -181,7 +193,7 @@ public class Jogo {
         // Funcao principal do jogo
         instrucoes();
         historia(0);
-        System.out.println("\n" + personagem + ", voce poderia ajudar o Pirata Barba Verde a resolver os desafios para chegar ao tesouro? (S ou N)");
+        System.out.println(personagem + ", voce poderia ajudar o Pirata Barba Verde a resolver os desafios para chegar ao tesouro? (S ou N)");
         String resp;
         do {
             resp = entrada.next().toUpperCase();
@@ -189,7 +201,9 @@ public class Jogo {
         if (resp.equals("N")){
             sair();
         }
-        System.out.println("Sabia. Voce é demais. Vamos comecar com os desafios.");
+        System.out.println("Sabia. Voce é demais. Vamos comecar!\n\n");
+        historia(2);
+
         /*get_pergunta(1);
         get_pergunta(2);
         get_pergunta(3);
