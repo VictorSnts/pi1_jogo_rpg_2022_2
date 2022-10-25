@@ -8,6 +8,8 @@ public class Jogo {
 
     static Scanner entrada = new Scanner(System.in);
     static String personagem;
+    static Dictionary<Integer,ArrayList<String>> dict_perguntas = define_perguntas();
+
 
     // TODO Criar um texto de bem vindo para o jogo e incluir na função
     static void bemvindo() {
@@ -63,9 +65,10 @@ public class Jogo {
         // Imprime a historia
 
         System.out.println();
-        personagem = define_nome_personagem();
         switch (part){
-            case 0 -> System.out.println("INCIO DA HISTORIA: \n" +
+            case 0:
+                personagem = define_nome_personagem();
+                System.out.println("INCIO DA HISTORIA: \n" +
                     "Em uma semana típica de inverno, um famoso capitão que já teria dirigido as maiores expedições realizadas, conhecido popularmente em sua cidade como Pirata Barba Verde, organizou mais uma grande viagem.\n" +
                     "\n" +
                     "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geográfico e cultural do Brasil, que era muito pouco conhecido na Itália daquela época. A única informação que tinham era que o território brasileiro era extremamente grande.\n" +
@@ -82,12 +85,13 @@ public class Jogo {
                     "\n" +
                     "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitão, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n" +
                     "\n" +
-                    "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta de algum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
+                    "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta dalgum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
                     "\n" +
                     "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou:" +
                     " \n");
 
-            case 1 -> System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
+            case 1:
+                System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
                     "\n" +
                     " Pra sua sorte o ponto de partida é entre os dois coqueiros que voces tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
                     "\n ");
@@ -140,19 +144,21 @@ public class Jogo {
     }
 
     // TODO Incluir as perguntas reais na função
-    static Dictionary<Integer,ArrayList<String>> define_perguntas(){
+    static Dictionary<Integer, ArrayList<String>> define_perguntas(){
         // Define e retorna um dicionario com os valores de Pergunta:[Lista de alteranativas].
         // Neste retorno, por padrao a primeira alternativa será a correta.
         Dictionary<Integer,ArrayList<String>> perguntas = new Hashtable<>();
 
         // PERGUNTA 1
         ArrayList<String> pergunta1 = new ArrayList<>();
-        pergunta1.add("<PERGUNTA 1>"); // PERGUNTA
-        pergunta1.add("Correta"); // ALT CORRETA
-        pergunta1.add("Incorreta");
-        pergunta1.add("Incorreta");
-        pergunta1.add("Incorreta");
-        pergunta1.add("Incorreta");
+        pergunta1.add("PERGUNTA 1: \n  O que é um sistema numérico?"); // PERGUNTA
+        pergunta1.add("Uma espécie de linguagem que se adapta de acordo com a cultura e a necessidade dos povos baseada em algarismos e a organização da sua representação."); // ALT CORRETA
+        pergunta1.add("Conjuntos de dispositivos eletrônicos (hardware) capazes de processar informações de acordo com um programa (software).");
+        pergunta1.add("Um dos principais sistemas do corpo humano responsáveis por fazer o transporte do oxigênio pelo corpo.");
+        pergunta1.add("Um software, ou um conjunto de softwares, cujo papel é gerenciar e administrar todos os recursos presentes em um sistema de computador.");
+        pergunta1.add("Um conjunto de corpos celestes que gravitam na órbita de um sol (uma estrela).");
+        pergunta1.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta1.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
 
         // PERGUNTA 2
         ArrayList<String> pergunta2 = new ArrayList<>();
@@ -162,6 +168,8 @@ public class Jogo {
         pergunta2.add("Incorreta");
         pergunta2.add("Incorreta");
         pergunta2.add("Incorreta");
+        pergunta2.add("<AJUDA 2>");
+        pergunta2.add("<INSTRUCAO 2>");
 
         // PERGUNTA 3
         ArrayList<String> pergunta3 = new ArrayList<>();
@@ -171,6 +179,8 @@ public class Jogo {
         pergunta3.add("Incorreta");
         pergunta3.add("Incorreta");
         pergunta3.add("Incorreta");
+        pergunta3.add("<AJUDA 3>");
+        pergunta3.add("<INSTRUCAO 3>");
 
         // PERGUNTA 4
         ArrayList<String> pergunta4 = new ArrayList<>();
@@ -180,6 +190,8 @@ public class Jogo {
         pergunta4.add("Incorreta");
         pergunta4.add("Incorreta");
         pergunta4.add("Incorreta");
+        pergunta4.add("<AJUDA 4>");
+        pergunta4.add("<INSTRUCAO 4>");
 
         perguntas.put(1, pergunta1);
         perguntas.put(2, pergunta2);
@@ -187,6 +199,110 @@ public class Jogo {
         perguntas.put(4, pergunta4);
 
         return perguntas;
+    }
+
+    static boolean verifica_acerto(String letra_resposta, ArrayList<String> alternativas, String correta){
+
+        int index_resposta = -1;
+        switch (letra_resposta){
+            case "A" -> index_resposta = 0;
+            case "B" -> index_resposta = 1;
+            case "C" -> index_resposta = 2;
+            case "D" -> index_resposta = 3;
+            case "E" -> index_resposta = 4;
+        }
+        String resposta = alternativas.get(index_resposta);
+
+        resposta = resposta.replace("    (A) ", "");
+        resposta = resposta.replace("    (B) ", "");
+        resposta = resposta.replace("    (C) ", "");
+        resposta = resposta.replace("    (D) ", "");
+        resposta = resposta.replace("    (E) ", "");
+
+        if (correta.equals(resposta)){
+            return true;
+        }
+        return false;
+    }
+
+    static ArrayList<String> embaralha_alternativas(ArrayList<String> alternativas){
+        ArrayList<String> new_alternativas = new ArrayList<>();
+        Collections.shuffle(alternativas);
+        for(int i = 0; i < alternativas.size(); i++) {
+            switch (i) {
+                case 0:
+                    new_alternativas.add("    (A) " + alternativas.get(i));
+                    break;
+                case 1:
+                    new_alternativas.add("    (B) " + alternativas.get(i));
+                    break;
+                case 2:
+                    new_alternativas.add("    (C) " + alternativas.get(i));
+                    break;
+                case 3:
+                    new_alternativas.add("    (D) " + alternativas.get(i));
+                    break;
+                case 4:
+                    new_alternativas.add("    (E) " + alternativas.get(i));
+                    break;
+            }
+        }
+        return new_alternativas;
+
+    }
+
+    static boolean faz_pergunta(ArrayList<String> pergunta) {
+        String enunciado = "";
+        String correta = "";
+        ArrayList<String> alternativas = new ArrayList<>();
+        String ajuda = "";
+        String instrucao = "";
+
+        int index;
+        for (index = 0; index <= pergunta.size(); index++) {
+            if (index == 0) enunciado = pergunta.get(index);
+            else if (index == 1) {
+                correta = pergunta.get(index);
+                alternativas.add(pergunta.get(index));
+            }
+            else if ((2 <= index) && (index <= 5)) alternativas.add(pergunta.get(index));
+            else if (index == 6) ajuda = pergunta.get(index);
+            else if (index == 7) instrucao = pergunta.get(index);
+        }
+
+        int tentativas = 3;
+        String letra_resposta = "";
+        do {
+            System.out.println(enunciado);
+            ArrayList<String> new_alternativas = embaralha_alternativas(alternativas);
+            for(String alternativa : new_alternativas){
+                System.out.println(alternativa);
+            }
+            System.out.println("Informe a alternativa correta: ");
+            letra_resposta = entrada.next().toUpperCase();
+            if (valida("alternativa", letra_resposta)){
+
+                if (verifica_acerto(letra_resposta, new_alternativas, correta)){
+                    System.out.println(instrucao);
+                    return true;
+                }
+                else {
+                    if (tentativas == 3){
+                        System.out.println();
+                        System.out.println(ajuda);
+                        System.out.println("Tente novamente! \n");
+                    }
+                    else if (tentativas == 2){
+                        System.out.println("\nVoce errou. Mas calma, voce ainda tem uma chance. Tente novamente.\n");
+                    }
+                    else {
+                        System.out.println("\nInfelizmente voce nao tem mais tentativas. O tesouro nunca mais será encontrado!\n");
+                    }
+                    tentativas -= 1;
+                }
+            }
+        } while (tentativas > 0);
+        return false;
     }
 
     static void jogar() {
@@ -201,13 +317,14 @@ public class Jogo {
         if (resp.equals("N")){
             sair();
         }
-        System.out.println("Sabia. Voce é demais. Vamos comecar!\n\n");
+        System.out.println("Sabia. Voce é demais. Vamos começar!\n\n");
         historia(2);
 
-        /*get_pergunta(1);
-        get_pergunta(2);
-        get_pergunta(3);
-        get_pergunta(4);*/
+        boolean acertou = false;
+        acertou = faz_pergunta(dict_perguntas.get(1));
+        if (!acertou) return;
+
+
     }
 
     public static void main(String[] args) {
