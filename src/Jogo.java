@@ -1,7 +1,5 @@
 import java.util.*;
 
-// TODO Criar funcao que recebe a lista de alternativas das perguntas e embaralha
-
 // Equacao de exemplo: x² – 5x + 6 = 0
 
 public class Jogo {
