@@ -92,7 +92,7 @@ public class Jogo {
             case 1:
                 System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
                         "\n" +
-                        " Pra sua sorte o ponto de partida é entre os dois coqueiros que voces tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
+                        " Pra sua sorte o ponto de partida é entre os dois coqueiros que vocês tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
                         "\n ");
         }
     }
