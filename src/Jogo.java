@@ -1,6 +1,7 @@
 import java.util.*;
 
-// Equacao de exemplo: x² – 5x + 6 = 0
+// Equacao de exemplo: ð‘¥2 + 9ð‘¥ + 20 = 0
+// Equacao de exemplo: Ax2 - Bð‘¥  C = 0
 
 public class Jogo {
 
@@ -9,14 +10,14 @@ public class Jogo {
     static Dictionary<Integer,ArrayList<String>> dict_perguntas = define_perguntas();
 
 
-    // TODO Criar um texto de bem vindo para o jogo e incluir na função
+    // TODO Criar um texto de bem vindo para o jogo e incluir na funÃ§Ã£o
     static void bemvindo() {
         // Imprime menssagem de boas vindas
         System.out.println("<Saudacoes de bem vindo aqui>");
     }
 
     static boolean valida(String modo, String entrada) {
-        // Verifica se a entrada do usuario é valida
+        // Verifica se a entrada do usuario Ã© valida
         String[] opcoes_validas = new String[]{"1", "2", "3", "4"};
         String[] letras_validas = new String[]{"A", "B", "C", "D", "E"};
         String[] sair_validas = new String[]{"S", "N"};
@@ -41,11 +42,11 @@ public class Jogo {
         // Exibe o menu e pede uma opcao
         String opcao;
         do {
-            System.out.println("Selecione uma das opções abaixo:");
-            System.out.println("  1 – Instruções\n"
-                    + "  2 – Jogar\n"
-                    + "  3 – Créditos\n"
-                    + "  4 – Sair");
+            System.out.println("Selecione uma das opÃ§Ãµes abaixo:");
+            System.out.println("  1 â€“ InstruÃ§Ãµes\n"
+                    + "  2 â€“ Jogar\n"
+                    + "  3 â€“ CrÃ©ditos\n"
+                    + "  4 â€“ Sair");
             opcao = entrada.next().toUpperCase();
         } while (!valida("opcao", opcao));
         return opcao;
@@ -58,7 +59,7 @@ public class Jogo {
         return entrada.next();
     }
 
-    // TODO Incluir a descrição da historia na funcao
+    // TODO Incluir a descriÃ§Ã£o da historia na funcao
     static void historia(Integer part) {
         // Imprime a historia
 
@@ -67,48 +68,48 @@ public class Jogo {
             case 0:
                 personagem = define_nome_personagem();
                 System.out.println("INCIO DA HISTORIA: \n" +
-                    "Em uma semana típica de inverno, um famoso capitão que já teria dirigido as maiores expedições realizadas, conhecido popularmente em sua cidade como Pirata Barba Verde, organizou mais uma grande viagem.\n" +
-                    "\n" +
-                    "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geográfico e cultural do Brasil, que era muito pouco conhecido na Itália daquela época. A única informação que tinham era que o território brasileiro era extremamente grande.\n" +
-                    "\n" +
-                    "Barba Verde, acompanhado de um de seus ajudantes " + personagem + " e de seu fiel escudeiro, Louro (um papagaio da espécie ecletus, tão felpudo quanto a própria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n" +
-                    "\n" +
-                    "Era uma noite fria de inverno e o tempo não estava nada bom. Barba Verde navegava com cautela, prestando muita atenção no caminho e nos seus instrumentos de navegação.\n" +
-                    "\n" +
-                    "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior. O vento e a chuva extremamente fortes dificultavam muito a navegação e a interpretação dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegação, acabou, sem perceber, saído da rota planejada. \n" +
-                    "\n" +
-                    "Perto do amanhecer, a tempestade teria passado e, estranhamente, o tempo estava bom, o dia estava lindo e perfeito para navegação, então o capitão então continuou navegando para direção que achava estar correta, até que avistaram terra firme logo a frente. Isso foi estranho para ele, porque a viagem de ida duraria alguns dias e não teria passado nem 15 horas desde a partida, mesmo assim, resolveram ir até a terra para descansar um pouco após a longa e tensa noite que teriam passado e para decidir para qual direção seguir para chegarem ao Brasil.\n" +
-                    "\n" +
-                    "Chegando em terra firme, eles puderam perceber que não se tratava de um continente, e sim de uma ilha não muito grande. Barba Verde e seu ajudante " + personagem + " se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n" +
-                    "\n" +
-                    "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitão, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n" +
-                    "\n" +
-                    "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta dalgum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
-                    "\n" +
-                    "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou:" +
-                    " \n");
+                        "Em uma semana tÃ­pica de inverno, um famoso capitÃ£o que jÃ¡ teria dirigido as maiores expediÃ§Ãµes realizadas, conhecido popularmente em sua cidade como Pirata Barba Verde, organizou mais uma grande viagem.\n" +
+                        "\n" +
+                        "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geogrÃ¡fico e cultural do Brasil, que era muito pouco conhecido na ItÃ¡lia daquela Ã©poca. A Ãºnica informaÃ§Ã£o que tinham era que o territÃ³rio brasileiro era extremamente grande.\n" +
+                        "\n" +
+                        "Barba Verde, acompanhado de um de seus ajudantes " + personagem + " e de seu fiel escudeiro, Louro (um papagaio da espÃ©cie ecletus, tÃ£o felpudo quanto a prÃ³pria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n" +
+                        "\n" +
+                        "Era uma noite fria de inverno e o tempo nÃ£o estava nada bom. Barba Verde navegava com cautela, prestando muita atenÃ§Ã£o no caminho e nos seus instrumentos de navegaÃ§Ã£o.\n" +
+                        "\n" +
+                        "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior. O vento e a chuva extremamente fortes dificultavam muito a navegaÃ§Ã£o e a interpretaÃ§Ã£o dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegaÃ§Ã£o, acabou, sem perceber, saÃ­do da rota planejada. \n" +
+                        "\n" +
+                        "Perto do amanhecer, a tempestade teria passado e, estranhamente, o tempo estava bom, o dia estava lindo e perfeito para navegaÃ§Ã£o, entÃ£o o capitÃ£o entÃ£o continuou navegando para direÃ§Ã£o que achava estar correta, atÃ© que avistaram terra firme logo a frente. Isso foi estranho para ele, porque a viagem de ida duraria alguns dias e nÃ£o teria passado nem 15 horas desde a partida, mesmo assim, resolveram ir atÃ© a terra para descansar um pouco apÃ³s a longa e tensa noite que teriam passado e para decidir para qual direÃ§Ã£o seguir para chegarem ao Brasil.\n" +
+                        "\n" +
+                        "Chegando em terra firme, eles puderam perceber que nÃ£o se tratava de um continente, e sim de uma ilha nÃ£o muito grande. Barba Verde e seu ajudante " + personagem + " se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n" +
+                        "\n" +
+                        "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitÃ£o, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n" +
+                        "\n" +
+                        "Ao pegÃ¡-lo em suas mÃ£os, consegue ler as seguintes palavras: â€œEste pergaminho estÃ¡ encantado e pode te levar atÃ© o tesouro mais valioso de todos os tempos. Para encontrÃ¡-lo vocÃª precisa resolver alguns desafios matemÃ¡ticos para, ao final, formar uma equaÃ§Ã£o de 2Âº Grau. VocÃª sÃ³ chegarÃ¡ ao local do tesouro quando encontrar o X da equaÃ§Ã£o. SÃ£o <NRO DE DESAFIOS> e eles aparecerÃ£o magicamente. Caso erre a resposta dalgum dos desafios, nÃ£o se preocupe, pois te darei algumas dicas de como resolvÃª-los.â€\n" +
+                        "\n" +
+                        "ApÃ³s ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele nÃ£o era muito bom em matemÃ¡tica. Por isso, acordou seu ajudante " + personagem + " e perguntou:" +
+                        " \n");
 
             case 1:
-                System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
-                    "\n" +
-                    " Pra sua sorte o ponto de partida é entre os dois coqueiros que voces tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
-                    "\n ");
+                System.out.println("A primeira coisa que vocÃªs devem fazer Ã© encontrar o ponto de partida." +
+                        "\n" +
+                        " Pra sua sorte o ponto de partida Ã© entre os dois coqueiros que voces tiravam um cochilo alguns instantes antes. Podemos comeÃ§ar os desafios. " +
+                        "\n ");
         }
     }
 
     // TODO Revisar as instrucoes do jogo
     static void instrucoes() {
-        // Imprime as instruções do jogo
+        // Imprime as instruÃ§Ãµes do jogo
         System.out.println();
-        System.out.println("Instruções: ");
-        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo " +
+        System.out.println("InstruÃ§Ãµes: ");
+        System.out.println("  No jogo vocÃª interpretarÃ¡ o papel de um ajudante do pirata barba verde e deve ajuda-lo " +
                 "respondendo as perguntas e resolvendo desafios chave para revelarem as instrucoes que os faram " +
-                "chegar ate o local onde o tesouro está escondido e, ao final, resolver o desafio principal para que " +
+                "chegar ate o local onde o tesouro estÃ¡ escondido e, ao final, resolver o desafio principal para que " +
                 "encontrem o tesouro." +
                 "\n" +
-                " Não se preoculpe se errar a resposta de algumas das perguntas. Caso isso aconteça voce terá alguma" +
-                "referencia para consultar e te auxiliar na resolução, mas tome cuidado. Se voce errar 3 vezes a mesma" +
-                "pergunta nunca mais será possivel chegar ate o tesouro." +
+                " NÃ£o se preoculpe se errar a resposta de algumas das perguntas. Caso isso aconteÃ§a voce terÃ¡ alguma" +
+                "referencia para consultar e te auxiliar na resoluÃ§Ã£o, mas tome cuidado. Se voce errar 3 vezes a mesma" +
+                "pergunta nunca mais serÃ¡ possivel chegar ate o tesouro." +
                 "\n");
     }
 
@@ -121,7 +122,7 @@ public class Jogo {
                 "      Mayanni Maia\n" +
                 "      Victor Santos\n" +
                 "      Vitor Ribeiro\n" +
-                "  Centro Universitario SENAC São Paulo");
+                "  Centro Universitario SENAC SÃ£o Paulo");
     }
 
     static void sair() {
@@ -134,67 +135,142 @@ public class Jogo {
         switch (opcao) {
             case "S" -> {
                 creditos();
-                System.out.println("\n\nAté a proxima.");
+                System.out.println("\n\nAtÃ© a proxima.");
                 System.exit(0);
             }
-            case "N" -> System.out.println("Que bom que continuará conosco.");
+            case "N" -> System.out.println("Que bom que continuarÃ¡ conosco.");
         }
     }
 
-    // TODO Incluir as perguntas reais na função
+    // TODO Incluir as perguntas reais na funÃ§Ã£o
     static Dictionary<Integer, ArrayList<String>> define_perguntas(){
         // Define e retorna um dicionario com os valores de Pergunta:[Lista de alteranativas].
-        // Neste retorno, por padrao a primeira alternativa será a correta.
+        // Neste retorno, por padrao a primeira alternativa serÃ¡ a correta.
         Dictionary<Integer,ArrayList<String>> perguntas = new Hashtable<>();
 
         // PERGUNTA 1
         ArrayList<String> pergunta1 = new ArrayList<>();
-        pergunta1.add("PERGUNTA 1: \n  O que é um sistema numérico?"); // PERGUNTA
-        pergunta1.add("Uma espécie de linguagem que se adapta de acordo com a cultura e a necessidade dos povos baseada em algarismos e a organização da sua representação."); // ALT CORRETA
-        pergunta1.add("Conjuntos de dispositivos eletrônicos (hardware) capazes de processar informações de acordo com um programa (software).");
-        pergunta1.add("Um dos principais sistemas do corpo humano responsáveis por fazer o transporte do oxigênio pelo corpo.");
-        pergunta1.add("Um software, ou um conjunto de softwares, cujo papel é gerenciar e administrar todos os recursos presentes em um sistema de computador.");
-        pergunta1.add("Um conjunto de corpos celestes que gravitam na órbita de um sol (uma estrela).");
-        pergunta1.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
-        pergunta1.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
+        pergunta1.add("PERGUNTA 1: \n  O que Ã© a potenciaÃ§Ã£o?"); // PERGUNTA
+        pergunta1.add("A potenciaÃ§Ã£o Ã© a operaÃ§Ã£o matemÃ¡tica que representa a multiplicaÃ§Ã£o de fatores iguais."); // ALT CORRETA
+        pergunta1.add("A potenciaÃ§Ã£o Ã© a operaÃ§Ã£o matemÃ¡tica que representa a multiplicaÃ§Ã£o de fatores distintos.");
+        pergunta1.add("A potenciaÃ§Ã£o Ã© a operaÃ§Ã£o matemÃ¡tica que representa a divisÃ£o de fatores iguais.");
+        pergunta1.add("A potenciaÃ§Ã£o Ã© a operaÃ§Ã£o matemÃ¡tica que representa a divisÃ£o de fatores distintos.");
+        pergunta1.add("A potenciaÃ§Ã£o Ã© a operaÃ§Ã£o matemÃ¡tica que representa a soma de fatores iguais.");
+        pergunta1.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://www.todamateria.com.br/potenciacao/)");
+        pergunta1.add("OBA! Voce acertou a resposta! DÃª 10 passos ao sul para revelar o proximo desafio.");
 
         // PERGUNTA 2
+        // TODO Verificar necessidade de alterar a divisao de potencias e alterar instrucoes
         ArrayList<String> pergunta2 = new ArrayList<>();
-        pergunta2.add("<PERGUNTA 2>"); // PERGUNTA
-        pergunta2.add("Correta"); // ALT CORRETA
-        pergunta2.add("Incorreta");
-        pergunta2.add("Incorreta");
-        pergunta2.add("Incorreta");
-        pergunta2.add("Incorreta");
-        pergunta2.add("<AJUDA 2>");
-        pergunta2.add("<INSTRUCAO 2>");
+        pergunta2.add("PERGUNTA 2: \n A primeira coisa que devemos fazer Ã© nos localizar e vocÃªs jÃ¡ fizeram isso. " +
+                "Agora o prÃ³ximo passo Ã© resolver a seguinte divisÃ£o de potÃªncias: 2^3/4^1"); // PERGUNTA
+        pergunta2.add("2"); // ALT CORRETA
+        pergunta2.add("4");
+        pergunta2.add("-2");
+        pergunta2.add("1");
+        pergunta2.add("-4");
+        pergunta2.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://edu.gcfglobal.org/pt/algebra/como-dividir-potencias/1/)");
+        pergunta2.add("OBA! VocÃª acertou a resposta! DÃª 8 passos ao Leste para revelar o prÃ³ximo desafio.");
 
         // PERGUNTA 3
         ArrayList<String> pergunta3 = new ArrayList<>();
-        pergunta3.add("<PERGUNTA 3>"); // PERGUNTA
-        pergunta3.add("Correta"); // ALT CORRETA
-        pergunta3.add("Incorreta");
-        pergunta3.add("Incorreta");
-        pergunta3.add("Incorreta");
-        pergunta3.add("Incorreta");
-        pergunta3.add("<AJUDA 3>");
-        pergunta3.add("<INSTRUCAO 3>");
+        pergunta3.add("PERGUNTA 3: \n  Quais das alternativas abaixo representa melhor o que Ã© um sistema numÃ©rico?"); // PERGUNTA
+        pergunta3.add("Uma espÃ©cie de linguagem que se adapta de acordo com a cultura e a necessidade dos povos baseada em algarismos e a organizaÃ§Ã£o da sua representaÃ§Ã£o."); // ALT CORRETA
+        pergunta3.add("Conjuntos de dispositivos eletrÃ´nicos (hardware) capazes de processar informaÃ§Ãµes de acordo com um programa (software).");
+        pergunta3.add("Um dos principais sistemas do corpo humano responsÃ¡veis por fazer o transporte do oxigÃªnio pelo corpo.");
+        pergunta3.add("Um software, ou um conjunto de softwares, cujo papel Ã© gerenciar e administrar todos os recursos presentes em um sistema de computador.");
+        pergunta3.add("Um conjunto de corpos celestes que gravitam na Ã³rbita de um sol (uma estrela).");
+        pergunta3.add("Opa, vocÃª errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta3.add("OBA! VocÃª acertou a resposta! DÃª 10 passos ao Norte para revelar o prÃ³ximo desafio.");
 
         // PERGUNTA 4
+        // TODO Verificar necessidade de alterar nro binario, incluir ajuda e alterar instrucoes de acordo com o resultado
         ArrayList<String> pergunta4 = new ArrayList<>();
-        pergunta4.add("<PERGUNTA 4>"); // PERGUNTA
-        pergunta4.add("Correta"); // ALT CORRETA
-        pergunta4.add("Incorreta");
-        pergunta4.add("Incorreta");
-        pergunta4.add("Incorreta");
-        pergunta4.add("Incorreta");
-        pergunta4.add("<AJUDA 4>");
-        pergunta4.add("<INSTRUCAO 4>");
+        pergunta4.add("PERGUNTA 4: \n  Agora para saber quantos passos vocÃª vai dar ao Sul. " +
+                "Para isso, vocÃª vai precisar converter o numero binÃ¡rio 0011 em nÃºmero decimal, vocÃª consegue? " +
+                "Indique a alternativa correta: "); // PERGUNTA
+        pergunta4.add("3"); // ALT CORRETA
+        pergunta4.add("2");
+        pergunta4.add("1");
+        pergunta4.add("4");
+        pergunta4.add("5");
+        pergunta4.add("Opa, vocÃª errou a resposta. Aqui vai uma referÃªncia para vocÃª se basear na prÃ³xima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta4.add("OBA! VocÃª acertou a resposta! DÃª 5 passos ao Norte para revelar o prÃ³ximo desafio.");
+
+
+        // PERGUNTA 5
+        ArrayList<String> pergunta5 = new ArrayList<>();
+        pergunta5.add("PERGUNTA 5: \n  Qual das alternativas abaixo representa melhor o que Ã© a operaÃ§Ã£o matemÃ¡tica RadiciaÃ§Ã£o?"); // PERGUNTA
+        pergunta5.add("A operaÃ§Ã£o matemÃ¡tica inversa da potenciaÃ§Ã£o."); // ALT CORRETA
+        pergunta5.add("A operaÃ§Ã£o matemÃ¡tica inversa da multiplicaÃ§Ã£o.");
+        pergunta5.add("A operaÃ§Ã£o matemÃ¡tica inversa da fatoraÃ§Ã£o.");
+        pergunta5.add("A operaÃ§Ã£o matemÃ¡tica inversa da diferenciaÃ§Ã£o.");
+        pergunta5.add("A operaÃ§Ã£o matemÃ¡tica inversa da divisÃ£o.");
+        pergunta5.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta5.add("OBA! Voce acertou a resposta! DÃª 45 passos ao sul para revelar o proximo desafio.");
+
+        // PERGUNTA 6
+        ArrayList<String> pergunta6 = new ArrayList<>();
+        pergunta6.add("PERGUNTA 6: \n  Voce tem uma nova informacao. Essa ilha tem o formato de um quadrado e area de 2025km2." +
+                "Usando a RadiciaÃ§Ã£o, calcule e informe a alternativa que contem o valor do tamanho (em quilometros) da faixa de areia de um dos lados da ilha:"); // PERGUNTA
+        pergunta6.add("45 Km"); // ALT CORRETA
+        pergunta6.add("25 Km");
+        pergunta6.add("9 Km");
+        pergunta6.add("75 Km");
+        pergunta6.add("18 Km");
+        pergunta6.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta6.add("OBA! Voce acertou a resposta! DÃª 45 passos ao sul para revelar o proximo desafio.");
+
+
+        // PERGUNTA 7
+        ArrayList<String> pergunta7 = new ArrayList<>();
+        pergunta7.add("DivisÃ£o de potÃªncia teorico"); // PERGUNTA
+        pergunta7.add("2"); // ALT CORRETA
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta7.add("OBA! Voce acertou a resposta! DÃª 10 passos ao sul para revelar o proximo desafio.");
+
+
+        // PERGUNTA 8
+        ArrayList<String> pergunta8 = new ArrayList<>();
+        pergunta8.add("Agora vocÃª precisa se lembrar de todos os passos que vocÃªs deram e colocÃ¡-los na fÃ³rmula de bhaskara." +
+                "Louro assoprou pra te ajudar" +
+                "A= 2" +
+                "B= 3" +
+                "C= 3"); // PERGUNTA
+                pergunta8.add("2"); // ALT CORRETA
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta8.add("OBA! Voce acertou a resposta! DÃª 10 passos ao sul para revelar o proximo desafio.");
+
+
+        // PERGUNTA 9
+        ArrayList<String> pergunta9 = new ArrayList<>();
+        pergunta9.add("DivisÃ£o de potÃªncia teorico"); // PERGUNTA
+        pergunta9.add("2"); // ALT CORRETA
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta9.add("OBA! Voce acertou a resposta! DÃª 10 passos ao sul para revelar o proximo desafio.");
 
         perguntas.put(1, pergunta1);
         perguntas.put(2, pergunta2);
         perguntas.put(3, pergunta3);
         perguntas.put(4, pergunta4);
+        perguntas.put(5, pergunta5);
+        perguntas.put(6, pergunta6);
+        perguntas.put(7, pergunta7);
+        perguntas.put(8, pergunta8);
+        perguntas.put(9, pergunta9);
+
 
         return perguntas;
     }
@@ -294,7 +370,7 @@ public class Jogo {
                         System.out.println("\nVoce errou. Mas calma, voce ainda tem uma chance. Tente novamente.\n");
                     }
                     else {
-                        System.out.println("\nInfelizmente voce nao tem mais tentativas. O tesouro nunca mais será encontrado!\n");
+                        System.out.println("\nInfelizmente voce nao tem mais tentativas. O tesouro nunca mais serÃ¡ encontrado!\n");
                     }
                     tentativas -= 1;
                 }
@@ -315,11 +391,16 @@ public class Jogo {
         if (resp.equals("N")){
             sair();
         }
-        System.out.println("Sabia. Voce é demais. Vamos começar!\n\n");
+        System.out.println("Sabia. Voce Ã© demais. Vamos comeÃ§ar!\n\n");
         historia(2);
 
         boolean acertou = false;
         acertou = faz_pergunta(dict_perguntas.get(1));
+        acertou = faz_pergunta(dict_perguntas.get(2));
+        acertou = faz_pergunta(dict_perguntas.get(3));
+        acertou = faz_pergunta(dict_perguntas.get(4));
+        acertou = faz_pergunta(dict_perguntas.get(5));
+        acertou = faz_pergunta(dict_perguntas.get(6));
         if (!acertou) return;
 
 
