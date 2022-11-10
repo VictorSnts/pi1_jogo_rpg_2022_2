@@ -1,6 +1,6 @@
 import java.util.*;
 
-// Equacao de exemplo: 𝑥2 + 9𝑥 + 20 = 0
+// Equacao de exemplo: 𝑥2   9𝑥   20 = 0
 // Equacao de exemplo: Ax2 - B𝑥  C = 0
 
 public class Jogo {
@@ -26,12 +26,15 @@ public class Jogo {
             case "opcao":
                 lista = Arrays.asList(opcoes_validas);
                 if (lista.contains(entrada)) return true;
+                break;
             case "alternativa":
                 lista = Arrays.asList(letras_validas);
                 if (lista.contains(entrada)) return true;
+                break;
             case "sair":
                 lista = Arrays.asList(sair_validas);
                 if (lista.contains(entrada)) return true;
+                break;
             default:
                 System.out.println("Entrada Invalida. Tente novamente");
         }
@@ -44,9 +47,9 @@ public class Jogo {
         do {
             System.out.println("Selecione uma das opções abaixo:");
             System.out.println("  1 – Instruções\n"
-                    + "  2 – Jogar\n"
-                    + "  3 – Créditos\n"
-                    + "  4 – Sair");
+                      "  2 – Jogar\n"
+                      "  3 – Créditos\n"
+                      "  4 – Sair");
             opcao = entrada.next().toUpperCase();
         } while (!valida("opcao", opcao));
         return opcao;
@@ -67,58 +70,58 @@ public class Jogo {
         switch (part){
             case 0:
                 personagem = define_nome_personagem();
-                System.out.println("INCIO DA HISTORIA: \n" +
-                        "Em uma semana típica de inverno, um famoso capitão que já teria dirigido as maiores expedições realizadas, conhecido popularmente em sua cidade como Pirata Barba Verde, organizou mais uma grande viagem.\n" +
-                        "\n" +
-                        "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geográfico e cultural do Brasil, que era muito pouco conhecido na Itália daquela época. A única informação que tinham era que o território brasileiro era extremamente grande.\n" +
-                        "\n" +
-                        "Barba Verde, acompanhado de um de seus ajudantes " + personagem + " e de seu fiel escudeiro, Louro (um papagaio da espécie ecletus, tão felpudo quanto a própria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n" +
-                        "\n" +
-                        "Era uma noite fria de inverno e o tempo não estava nada bom. Barba Verde navegava com cautela, prestando muita atenção no caminho e nos seus instrumentos de navegação.\n" +
-                        "\n" +
-                        "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior. O vento e a chuva extremamente fortes dificultavam muito a navegação e a interpretação dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegação, acabou, sem perceber, saído da rota planejada. \n" +
-                        "\n" +
-                        "Perto do amanhecer, a tempestade teria passado e, estranhamente, o tempo estava bom, o dia estava lindo e perfeito para navegação, então o capitão então continuou navegando para direção que achava estar correta, até que avistaram terra firme logo a frente. Isso foi estranho para ele, porque a viagem de ida duraria alguns dias e não teria passado nem 15 horas desde a partida, mesmo assim, resolveram ir até a terra para descansar um pouco após a longa e tensa noite que teriam passado e para decidir para qual direção seguir para chegarem ao Brasil.\n" +
-                        "\n" +
-                        "Chegando em terra firme, eles puderam perceber que não se tratava de um continente, e sim de uma ilha não muito grande. Barba Verde e seu ajudante " + personagem + " se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n" +
-                        "\n" +
-                        "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitão, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n" +
-                        "\n" +
-                        "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta dalgum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n" +
-                        "\n" +
-                        "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante " + personagem + " e perguntou:" +
+                System.out.println("INCIO DA HISTORIA: \n"  
+                        "Em uma semana típica de inverno, um famoso capitão que já teria dirigido as maiores expedições realizadas, conhecido popularmente em sua cidade como Pirata Barba Verde, organizou mais uma grande viagem.\n"  
+                        "\n"  
+                        "Essa viagem teria como destino o litoral brasileiro, com a finalidade de fazer um reconhecimento geográfico e cultural do Brasil, que era muito pouco conhecido na Itália daquela época. A única informação que tinham era que o território brasileiro era extremamente grande.\n"  
+                        "\n"  
+                        "Barba Verde, acompanhado de um de seus ajudantes "   personagem   " e de seu fiel escudeiro, Louro (um papagaio da espécie ecletus, tão felpudo quanto a própria barba do Pirata Barba Verde), finalizaram os preparativos para a viagem e partiram.\n"  
+                        "\n"  
+                        "Era uma noite fria de inverno e o tempo não estava nada bom. Barba Verde navegava com cautela, prestando muita atenção no caminho e nos seus instrumentos de navegação.\n"  
+                        "\n"  
+                        "Em poucas horas de viagem, a tempestade que os acompanhava desde a partida ficou ainda pior. O vento e a chuva extremamente fortes dificultavam muito a navegação e a interpretação dos instrumentos. Barba Verde, mesmo com tanta experiencia em navegação, acabou, sem perceber, saído da rota planejada. \n"  
+                        "\n"  
+                        "Perto do amanhecer, a tempestade teria passado e, estranhamente, o tempo estava bom, o dia estava lindo e perfeito para navegação, então o capitão então continuou navegando para direção que achava estar correta, até que avistaram terra firme logo a frente. Isso foi estranho para ele, porque a viagem de ida duraria alguns dias e não teria passado nem 15 horas desde a partida, mesmo assim, resolveram ir até a terra para descansar um pouco após a longa e tensa noite que teriam passado e para decidir para qual direção seguir para chegarem ao Brasil.\n"  
+                        "\n"  
+                        "Chegando em terra firme, eles puderam perceber que não se tratava de um continente, e sim de uma ilha não muito grande. Barba Verde e seu ajudante "   personagem   " se deitaram sob alguns coqueiros para tirar um cochilo antes de discutirem sobre o caminho que seguiriam. Enquanto isso, Louro sobrevoava a ilha empolgado, pois era um local totalmente diferente dos que conhecia na costa europeia.\n"  
+                        "\n"  
+                        "Poucos minutos depois, Barba Verde foi acordado por Louro, que carregava uma garrafa com um pergaminho dentro. O capitão, bravo pelo papagaio ter o acordado, quebra a garrafa e decide ver o que estava escrito no pergaminho.\n"  
+                        "\n"  
+                        "Ao pegá-lo em suas mãos, consegue ler as seguintes palavras: “Este pergaminho está encantado e pode te levar até o tesouro mais valioso de todos os tempos. Para encontrá-lo você precisa resolver alguns desafios matemáticos para, ao final, formar uma equação de 2º Grau. Você só chegará ao local do tesouro quando encontrar o X da equação. São <NRO DE DESAFIOS> e eles aparecerão magicamente. Caso erre a resposta dalgum dos desafios, não se preocupe, pois te darei algumas dicas de como resolvê-los.”\n"  
+                        "\n"  
+                        "Após ler o pergaminho, o Pirata Barba Verde ficou animado para encontrar o tesouro, mas ele não era muito bom em matemática. Por isso, acordou seu ajudante "   personagem   " e perguntou:"  
                         " \n");
                 break;
 
             case 1:
-                System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida." +
-                        "\n" +
-                        " Pra sua sorte o ponto de partida é entre os dois coqueiros que vocês tiravam um cochilo alguns instantes antes. Podemos começar os desafios. " +
+                System.out.println("A primeira coisa que vocês devem fazer é encontrar o ponto de partida."  
+                        "\n"  
+                        " Pra sua sorte o ponto de partida é entre os dois coqueiros que vocês tiravam um cochilo alguns instantes antes. Podemos começar os desafios. "  
                         "\n ");
                 break;
 
             case 2:
-                System.out.println("\nVoces chegaram ao local do proximo desafio. Ai vai a pergunta. Acerte para revelar a direcao que voce precisa seguir" +
+                System.out.println("\nVoces chegaram ao local do proximo desafio. Ai vai a pergunta. Acerte para revelar a direcao que voce precisa seguir"  
                         "\n");
                 break;
 
             case 3:
-                System.out.println("\nQue bom que voce chegou ate aqui. Aqui esta a pergunta. Acerte para saber pra qual direção seguir" +
+                System.out.println("\nQue bom que voce chegou ate aqui. Aqui esta a pergunta. Acerte para saber pra qual direção seguir"  
                         "\n");
                 break;
 
             case 4:
-                System.out.println("Voce esta acertando todas, vai chegar ao tesouro bem rapido. Aqui vai a proxima pergunta" +
+                System.out.println("Voce esta acertando todas, vai chegar ao tesouro bem rapido. Aqui vai a proxima pergunta"  
                         "\n");
                 break;
 
             case 5:
-                System.out.println("Uau! Acertou mais uma. Aqui esta a proxima." +
+                System.out.println("Uau! Acertou mais uma. Aqui esta a proxima."  
                         "\n");
                 break;
 
             case 6:
-                System.out.println("Parabens! Está cada vez mais proximo do tesouro. A proxima pergunta é a seguinte:" +
+                System.out.println("Parabens! Está cada vez mais proximo do tesouro. A proxima pergunta é a seguinte:"  
                         "\n");
                 break;
         }
@@ -129,26 +132,26 @@ public class Jogo {
         // Imprime as instruções do jogo
         System.out.println();
         System.out.println("Instruções: ");
-        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo " +
-                "respondendo as perguntas e resolvendo desafios chave para revelarem as instrucoes que os faram " +
-                "chegar ate o local onde o tesouro está escondido e, ao final, resolver o desafio principal para que " +
-                "encontrem o tesouro." +
-                "\n" +
-                " Não se preoculpe se errar a resposta de algumas das perguntas. Caso isso aconteça voce terá alguma" +
-                "referencia para consultar e te auxiliar na resolução, mas tome cuidado. Se voce errar 3 vezes a mesma" +
-                "pergunta nunca mais será possivel chegar ate o tesouro." +
+        System.out.println("  No jogo você interpretará o papel de um ajudante do pirata barba verde e deve ajuda-lo "  
+                "respondendo as perguntas e resolvendo desafios chave para revelarem as instrucoes que os faram "  
+                "chegar ate o local onde o tesouro está escondido e, ao final, resolver o desafio principal para que "  
+                "encontrem o tesouro."  
+                "\n"  
+                " Não se preoculpe se errar a resposta de algumas das perguntas. Caso isso aconteça voce terá alguma"  
+                "referencia para consultar e te auxiliar na resolução, mas tome cuidado. Se voce errar 3 vezes a mesma"  
+                "pergunta nunca mais será possivel chegar ate o tesouro."  
                 "\n");
     }
 
     static void creditos() {
         // Imprime os creditos do jogo
         System.out.println("Creditos: ");
-        System.out.println("  Jogo desenvolvido para a disciplina de PI1 - Analise e desenvolvimento de Sistemas\n" +
-                "    Integrantes: \n" +
-                "      Bruna Marques\n" +
-                "      Mayanni Maia\n" +
-                "      Victor Santos\n" +
-                "      Vitor Ribeiro\n" +
+        System.out.println("  Jogo desenvolvido para a disciplina de PI1 - Analise e desenvolvimento de Sistemas\n"  
+                "    Integrantes: \n"  
+                "      Bruna Marques\n"  
+                "      Mayanni Maia\n"  
+                "      Victor Santos\n"  
+                "      Vitor Ribeiro\n"  
                 "  Centro Universitario SENAC São Paulo");
     }
 
@@ -195,7 +198,7 @@ public class Jogo {
         // PERGUNTA 2
         // TODO Verificar necessidade de alterar a divisao de potencias e alterar instrucoes
         ArrayList<String> pergunta2 = new ArrayList<>();
-        pergunta2.add("PERGUNTA 2: \n A primeira coisa que devemos fazer é nos localizar e vocês já fizeram isso. " +
+        pergunta2.add("PERGUNTA 2: \n A primeira coisa que devemos fazer é nos localizar e vocês já fizeram isso. "  
                 "Agora o próximo passo é resolver a seguinte divisão de potências: 2^3/4^1"); // PERGUNTA
         pergunta2.add("2"); // ALT CORRETA
         pergunta2.add("4");
@@ -219,8 +222,8 @@ public class Jogo {
         // PERGUNTA 4
         // TODO Verificar necessidade de alterar nro binario, incluir ajuda e alterar instrucoes de acordo com o resultado
         ArrayList<String> pergunta4 = new ArrayList<>();
-        pergunta4.add("PERGUNTA 4: \n  Agora para saber quantos passos você vai dar ao Sul. " +
-                "Para isso, você vai precisar converter o numero binário 0011 em número decimal, você consegue? " +
+        pergunta4.add("PERGUNTA 4: \n  Agora para saber quantos passos você vai dar ao Sul. "  
+                "Para isso, você vai precisar converter o numero binário 0011 em número decimal, você consegue? "  
                 "Indique a alternativa correta: "); // PERGUNTA
         pergunta4.add("3"); // ALT CORRETA
         pergunta4.add("2");
@@ -244,7 +247,7 @@ public class Jogo {
 
         // PERGUNTA 6
         ArrayList<String> pergunta6 = new ArrayList<>();
-        pergunta6.add("PERGUNTA 6: \n  Voce tem uma nova informacao. Essa ilha tem o formato de um quadrado e area de 2025km2." +
+        pergunta6.add("PERGUNTA 6: \n  Voce tem uma nova informacao. Essa ilha tem o formato de um quadrado e area de 2025km2."  
                 "Usando a Radiciação, calcule e informe a alternativa que contem o valor do tamanho (em quilometros) da faixa de areia de um dos lados da ilha:"); // PERGUNTA
         pergunta6.add("45 Km"); // ALT CORRETA
         pergunta6.add("25 Km");
@@ -269,10 +272,10 @@ public class Jogo {
 
         // PERGUNTA 8
         ArrayList<String> pergunta8 = new ArrayList<>();
-        pergunta8.add("Agora você precisa se lembrar de todos os passos que vocês deram e colocá-los na fórmula de bhaskara." +
-                "Louro assoprou pra te ajudar" +
-                "A= 2" +
-                "B= 3" +
+        pergunta8.add("Agora você precisa se lembrar de todos os passos que vocês deram e colocá-los na fórmula de bhaskara."  
+                "Louro assoprou pra te ajudar"  
+                "A= 2"  
+                "B= 3"  
                 "C= 3"); // PERGUNTA
         pergunta8.add("2"); // ALT CORRETA
         pergunta8.add("errada");
@@ -354,22 +357,22 @@ public class Jogo {
     static ArrayList<String> embaralha_alternativas(ArrayList<String> alternativas){
         ArrayList<String> new_alternativas = new ArrayList<>();
         Collections.shuffle(alternativas);
-        for(int i = 0; i < alternativas.size(); i++) {
+        for(int i = 0; i < alternativas.size(); i  ) {
             switch (i) {
                 case 0:
-                    new_alternativas.add("    (A) " + alternativas.get(i));
+                    new_alternativas.add("    (A) "   alternativas.get(i));
                     break;
                 case 1:
-                    new_alternativas.add("    (B) " + alternativas.get(i));
+                    new_alternativas.add("    (B) "   alternativas.get(i));
                     break;
                 case 2:
-                    new_alternativas.add("    (C) " + alternativas.get(i));
+                    new_alternativas.add("    (C) "   alternativas.get(i));
                     break;
                 case 3:
-                    new_alternativas.add("    (D) " + alternativas.get(i));
+                    new_alternativas.add("    (D) "   alternativas.get(i));
                     break;
                 case 4:
-                    new_alternativas.add("    (E) " + alternativas.get(i));
+                    new_alternativas.add("    (E) "   alternativas.get(i));
                     break;
             }
         }
@@ -385,112 +388,10 @@ public class Jogo {
         String instrucao = "";
 
         int index;
-        for (index = 0; index <= pergunta.size(); index++) {
+        for (index = 0; index <= pergunta.size(); index  ) {
             if (index == 0) enunciado = pergunta.get(index);
             else if (index == 1) {
                 correta = pergunta.get(index);
                 alternativas.add(pergunta.get(index));
             }
-            else if ((2 <= index) && (index <= 5)) alternativas.add(pergunta.get(index));
-            else if (index == 6) ajuda = pergunta.get(index);
-            else if (index == 7) instrucao = pergunta.get(index);
-        }
-
-        int tentativas = 3;
-        String letra_resposta = "";
-        do {
-            System.out.println(enunciado);
-            ArrayList<String> new_alternativas = embaralha_alternativas(alternativas);
-            for(String alternativa : new_alternativas){
-                System.out.println(alternativa);
-            }
-            System.out.println("Informe a alternativa correta: ");
-            letra_resposta = entrada.next().toUpperCase();
-            if (valida("alternativa", letra_resposta)){
-
-                if (verifica_acerto(letra_resposta, new_alternativas, correta)){
-                    System.out.println(instrucao);
-                    return true;
-                }
-                else {
-                    if (tentativas == 3){
-                        System.out.println();
-                        System.out.println(ajuda);
-                        System.out.println("Tente novamente! \n");
-                    }
-                    else if (tentativas == 2){
-                        System.out.println("\nVoce errou. Mas calma, voce ainda tem uma chance. Tente novamente.\n");
-                    }
-                    else {
-                        System.out.println("\nInfelizmente voce nao tem mais tentativas. O tesouro nunca mais será encontrado!\n");
-                    }
-                    tentativas -= 1;
-                }
-            }
-        } while (tentativas > 0);
-        return false;
-    }
-
-    static void jogar() {
-        // Funcao principal do jogo
-        instrucoes();
-        historia(0);
-        System.out.println(personagem + ", voce poderia ajudar o Pirata Barba Verde a resolver os desafios para chegar ao tesouro? (S ou N)");
-        String resp;
-        do {
-            resp = entrada.next().toUpperCase();
-        } while (!valida("sair", resp));
-        if (resp.equals("N")){
-            sair();
-        }
-        System.out.println("Sabia. Voce é demais. Vamos começar!\n\n");
-
-        int nro_perguntas = 6;
-        for (int i = 1; i <= nro_perguntas; i++){
-            boolean acertou = false;
-            historia(i);
-            acertou = faz_pergunta(dict_perguntas.get(i));
-            if (!acertou) return;
-        }
-
-
-    }
-
-    public static void main(String[] args) {
-        bemvindo();
-        while (true) {
-            String opcao = pede_opcao();
-            switch (opcao) {
-                case "1":
-                {
-                    instrucoes();
-                    break;
-                }
-                case "2":
-                {
-                    jogar();
-                    String continuar;
-                    do {
-                        System.out.println("Chegamos ao final da partida. Gostaria de jogar novamente? (S ou N)");
-                        continuar = entrada.next().toUpperCase();
-                    } while (!valida("sair", continuar));
-                    if (continuar.equals("N")) {
-                        creditos();
-                        System.exit(0);
-                    }
-                    break;
-                }
-                case "3":
-                {
-                    creditos();
-                    break;
-                }
-                case "4":
-                {
-                    sair();
-                    break;
-                }
-            }
-        }
-    }
-}
+            else if ((2 <= index) 
