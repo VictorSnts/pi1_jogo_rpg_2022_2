@@ -1,5 +1,7 @@
 import java.util.*;
 
+// Equacao de exemplo: 𝑥2 + 9𝑥 + 20 = 0
+// Equacao de exemplo: Ax2 - B𝑥  C = 0
 
 public class Jogo {
 
@@ -24,15 +26,12 @@ public class Jogo {
             case "opcao":
                 lista = Arrays.asList(opcoes_validas);
                 if (lista.contains(entrada)) return true;
-                break;
             case "alternativa":
                 lista = Arrays.asList(letras_validas);
                 if (lista.contains(entrada)) return true;
-                break;
             case "sair":
                 lista = Arrays.asList(sair_validas);
                 if (lista.contains(entrada)) return true;
-                break;
             default:
                 System.out.println("Entrada Invalida. Tente novamente");
         }
@@ -122,37 +121,6 @@ public class Jogo {
                 System.out.println("Parabens! Está cada vez mais proximo do tesouro. A proxima pergunta é a seguinte:" +
                         "\n");
                 break;
-
-            case 7:
-                System.out.println("Otimo! Mais um acerto.. Assim vc vai longe..\n" +
-                        "A partir de agora as perguntas ficam umm pouco mais dificeis." +
-                        "\n");
-                break;
-
-            case 8:
-                System.out.println("Que bom que voce sabe o que é uma equação, pois agora voce terá que resolver uma." +
-                        "\n");
-                break;
-
-            case 9:
-                System.out.println("Olha, vc conseguiu resolver essa. Vamos ver se voce sabe um pouco mais sobre equaçoes." +
-                        "\n");
-                break;
-
-            case 10:
-                System.out.println("Voce está preparado para o desafio final? Vamos ver se valeu apena todo esse esforço até aqui.. \n" +
-                        "Aqui vai o ultimo desafio que te levará ate a localização exata do tesouro." +
-                        "\n");
-                break;
-
-            case 11:
-                System.out.println("Finalmente, depois de todo e esse esforço e dificuldade voces conseguiram. Encontraram o tesouro.\n" +
-                        "Parabens Piratas. Agora voces sao ricos. só terão o trabalho de levar essa enorme quantidade de ouro para a embarcação e voltar para casa.\n\n" +
-                        "Nesse momento todas as informaçoes que surgiram no velho pergaminho desapareceram pra sempre.\n" +
-                        "O pirata, seu ajudante e louro, o principal responsavel pela descoberta, voltaram para casa para contar todas a novidades e compartilhar o tesouro com suas familias.\n" +
-                        "\n");
-                break;
-
         }
     }
 
@@ -225,16 +193,17 @@ public class Jogo {
         pergunta1.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
 
         // PERGUNTA 2
+        // TODO Verificar necessidade de alterar a divisao de potencias e alterar instrucoes
         ArrayList<String> pergunta2 = new ArrayList<>();
         pergunta2.add("PERGUNTA 2: \n A primeira coisa que devemos fazer é nos localizar e vocês já fizeram isso. " +
-                "Agora o próximo passo é resolver a seguinte divisão de potências: 2^8/8^2"); // PERGUNTA
-        pergunta2.add("4"); // ALT CORRETA
-        pergunta2.add("2");
-        pergunta2.add("8");
-        pergunta2.add("16");
-        pergunta2.add("64");
+                "Agora o próximo passo é resolver a seguinte divisão de potências: 2^3/4^1"); // PERGUNTA
+        pergunta2.add("2"); // ALT CORRETA
+        pergunta2.add("4");
+        pergunta2.add("-2");
+        pergunta2.add("1");
+        pergunta2.add("-4");
         pergunta2.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://edu.gcfglobal.org/pt/algebra/como-dividir-potencias/1/)");
-        pergunta2.add("OBA! Você acertou a resposta! Dê 4 passos ao Leste para revelar o próximo desafio.");
+        pergunta2.add("OBA! Você acertou a resposta! Dê 8 passos ao Leste para revelar o próximo desafio.");
 
         // PERGUNTA 3
         ArrayList<String> pergunta3 = new ArrayList<>();
@@ -248,17 +217,18 @@ public class Jogo {
         pergunta3.add("OBA! Você acertou a resposta! Dê 10 passos ao Norte para revelar o próximo desafio.");
 
         // PERGUNTA 4
+        // TODO Verificar necessidade de alterar nro binario, incluir ajuda e alterar instrucoes de acordo com o resultado
         ArrayList<String> pergunta4 = new ArrayList<>();
         pergunta4.add("PERGUNTA 4: \n  Agora para saber quantos passos você vai dar ao Sul. " +
-                "Para isso, você vai precisar converter o numero binário 10001101 em número decimal, você consegue? " +
+                "Para isso, você vai precisar converter o numero binário 0011 em número decimal, você consegue? " +
                 "Indique a alternativa correta: "); // PERGUNTA
-        pergunta4.add("141"); // ALT CORRETA
-        pergunta4.add("52");
-        pergunta4.add("692");
-        pergunta4.add("18");
+        pergunta4.add("3"); // ALT CORRETA
+        pergunta4.add("2");
+        pergunta4.add("1");
+        pergunta4.add("4");
         pergunta4.add("5");
-        pergunta4.add("Opa, você errou a resposta. Aqui vai uma referência para você se basear na próxima tentativa: (https://educacao.uol.com.br/disciplinas/matematica/numeros-binarios-2-conversao-para-decimais.htm)");
-        pergunta4.add("OBA! Você acertou a resposta! Dê 141 passos ao Sul para revelar o próximo desafio.");
+        pergunta4.add("Opa, você errou a resposta. Aqui vai uma referência para você se basear na próxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta4.add("OBA! Você acertou a resposta! Dê 30 passos ao Sul para revelar o próximo desafio.");
 
 
         // PERGUNTA 5
@@ -282,57 +252,47 @@ public class Jogo {
         pergunta6.add("75 Km");
         pergunta6.add("18 Km");
         pergunta6.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
-        pergunta6.add("OBA! Voce acertou a resposta! Dê 45 passos ao norte para revelar o proximo desafio.");
+        pergunta6.add("OBA! Voce acertou a resposta! Dê 15 passos ao norte para revelar o proximo desafio.");
 
 
         // PERGUNTA 7
         ArrayList<String> pergunta7 = new ArrayList<>();
-        pergunta7.add("PERGUNTA 7: \n  Qual das alternativas abaixo melhor representa o que é uma equação na matemática?"); // PERGUNTA
-        pergunta7.add("Equações são sentenças matemáticas que possuem incógnitas, as quais são letras que representam valores desconhecidos, e igualdade"); // ALT CORRETA
-        pergunta7.add("Equações são sentenças matemáticas que possuem incógnitas, as quais são letras que representam valores conhecidos, e igualdade.");
-        pergunta7.add("Equações são sentenças matemáticas que possuem incógnitas, as quais são letras que representam valores conhecidos, e nao tem igualdade.");
-        pergunta7.add("Equações são sentenças matemáticas que possuem incógnitas, as quais são letras que representam valores desconhecidos, e nao tem igualdade.");
-        pergunta7.add("Equações são sentenças matemáticas que nao possuem incógnitas e nem igualdade.");
-        pergunta7.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://brasilescola.uol.com.br/matematica/equacao-do-1-grau.htm#:~:text=A%20equa%C3%A7%C3%A3o%20do%201%C2%BA%20grau%20%C3%A9%20uma%20equa%C3%A7%C3%A3o%20que%20possui,a%20%C3%A9%20diferente%20de%200.)");
+        pergunta7.add("Divisão de potência teorico"); // PERGUNTA
+        pergunta7.add("2"); // ALT CORRETA
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("errada");
+        pergunta7.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
         pergunta7.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
 
 
         // PERGUNTA 8
         ArrayList<String> pergunta8 = new ArrayList<>();
-        pergunta8.add("PERGUNTA 8: \n" +
-                "Descubra a solução para a seguinte equação: 4 * (x + 3) - x = 24 + x"); // PERGUNTA
-        pergunta8.add("6"); // ALT CORRETA
-        pergunta8.add("2");
-        pergunta8.add("4");
-        pergunta8.add("8");
-        pergunta8.add("12");
-        pergunta8.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://brasilescola.uol.com.br/matematica/equacao-do-1-grau.htm#:~:text=A%20equa%C3%A7%C3%A3o%20do%201%C2%BA%20grau%20%C3%A9%20uma%20equa%C3%A7%C3%A3o%20que%20possui,a%20%C3%A9%20diferente%20de%200.)");
-        pergunta8.add("OBA! Voce acertou a resposta! Dê 6 passos ao sul para revelar o proximo desafio.");
+        pergunta8.add("Agora você precisa se lembrar de todos os passos que vocês deram e colocá-los na fórmula de bhaskara." +
+                "Louro assoprou pra te ajudar" +
+                "A= 2" +
+                "B= 3" +
+                "C= 3"); // PERGUNTA
+        pergunta8.add("2"); // ALT CORRETA
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("errada");
+        pergunta8.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta8.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
 
 
         // PERGUNTA 9
         ArrayList<String> pergunta9 = new ArrayList<>();
-        pergunta9.add("PERGUNTA 9: \n" +
-                "O que determina o grau da equação?"); // PERGUNTA
-        pergunta9.add("O expoente da incógnita."); // ALT CORRETA
-        pergunta9.add("O grau de dificuldade na resolução.");
-        pergunta9.add("O numero de \"x\" na equação.");
-        pergunta9.add("O resultado da equação.");
-        pergunta9.add("Nenhuma das alternativas está correta.");
-        pergunta9.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (http://matematicasj.blogspot.com/2008/05/equao-do-1-e-do-2-grau-qual-diferena.html)");
-        pergunta9.add("OBA! Voce acertou a resposta! Dê 10 passos a oeste para revelar o ultimo desafio.");
-
-        // PERGUNTA 10
-        ArrayList<String> pergunta10 = new ArrayList<>();
-        pergunta10.add("PERGUNTA 10: \n" +
-                "Descubra as raizes para a seguinte equação: xˆ2 - 14x + 48"); // PERGUNTA
-        pergunta10.add("8 e 6"); // ALT CORRETA
-        pergunta10.add("9 e 12");
-        pergunta10.add("1 e 1");
-        pergunta10.add("-5 e 5");
-        pergunta10.add("0 e -5");
-        pergunta10.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://www.todamateria.com.br/equacao-do-segundo-grau/)");
-        pergunta10.add("OBA! Voce acertou a resposta! Dê 8 passos para o norte e, em seguiguida, 6 passoa a leste e estará no local exato do tesouro.");
+        pergunta9.add("Divisão de potência teorico"); // PERGUNTA
+        pergunta9.add("2"); // ALT CORRETA
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("errada");
+        pergunta9.add("Opa, voce errou a resposta. Aqui vai uma referencia para voce se basear na proxima tentativa: (https://mundoeducacao.uol.com.br/matematica/sistema-numeracao.htm)");
+        pergunta9.add("OBA! Voce acertou a resposta! Dê 10 passos ao sul para revelar o proximo desafio.");
 
         perguntas.put(1, pergunta1);
         perguntas.put(2, pergunta2);
@@ -343,8 +303,6 @@ public class Jogo {
         perguntas.put(7, pergunta7);
         perguntas.put(8, pergunta8);
         perguntas.put(9, pergunta9);
-        perguntas.put(10, pergunta10);
-
 
 
         return perguntas;
@@ -487,15 +445,13 @@ public class Jogo {
         }
         System.out.println("Sabia. Voce é demais. Vamos começar!\n\n");
 
-        int nro_perguntas = 10;
+        int nro_perguntas = 6;
         for (int i = 1; i <= nro_perguntas; i++){
             boolean acertou = false;
             historia(i);
             acertou = faz_pergunta(dict_perguntas.get(i));
             if (!acertou) return;
         }
-
-        historia(11);
 
 
     }
