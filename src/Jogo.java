@@ -8,10 +8,9 @@ public class Jogo {
     static Dictionary<Integer,ArrayList<String>> dict_perguntas = define_perguntas();
 
 
-    // TODO Criar um texto de bem vindo para o jogo e incluir na função
     static void bemvindo() {
         // Imprime menssagem de boas vindas
-        System.out.println("<Saudacoes de bem vindo aqui>");
+        System.out.println("Seja bem vindo ao jogo. Queremos lhe desejar boa sorte, que você obtenha sucesso nesse desafio.");
     }
 
     static boolean valida(String modo, String entrada) {
@@ -60,7 +59,6 @@ public class Jogo {
         return entrada.next();
     }
 
-    // TODO Incluir a descrição da historia na funcao
     static void historia(Integer part) {
         // Imprime a historia
 
@@ -156,7 +154,6 @@ public class Jogo {
         }
     }
 
-    // TODO Revisar as instrucoes do jogo
     static void instrucoes() {
         // Imprime as instruções do jogo
         System.out.println();
@@ -207,7 +204,6 @@ public class Jogo {
         }
     }
 
-    // TODO Incluir as perguntas reais na função
     static Dictionary<Integer, ArrayList<String>> define_perguntas(){
         // Define e retorna um dicionario com os valores de Pergunta:[Lista de alteranativas].
         // Neste retorno, por padrao a primeira alternativa será a correta.
@@ -351,7 +347,7 @@ public class Jogo {
     }
 
     static boolean verifica_acerto(String letra_resposta, ArrayList<String> alternativas, String correta){
-
+        // Recebe a resposta do usuario e verifica se esta correta
         int index_resposta = -1;
         switch (letra_resposta){
             case "A":
@@ -394,6 +390,7 @@ public class Jogo {
     }
 
     static ArrayList<String> embaralha_alternativas(ArrayList<String> alternativas){
+        // Recebe a lista de alternativas e embaralha
         ArrayList<String> new_alternativas = new ArrayList<>();
         Collections.shuffle(alternativas);
         for(int i = 0; i < alternativas.size(); i++) {
@@ -420,6 +417,7 @@ public class Jogo {
     }
 
     static boolean faz_pergunta(ArrayList<String> pergunta) {
+        // Exibe a pergunta
         String enunciado = "";
         String correta = "";
         ArrayList<String> alternativas = new ArrayList<>();
